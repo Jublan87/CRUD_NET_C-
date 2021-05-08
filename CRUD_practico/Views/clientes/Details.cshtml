@@ -1,0 +1,58 @@
+﻿@model CRUD_practico.Models.cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cuit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.razonSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razonSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
