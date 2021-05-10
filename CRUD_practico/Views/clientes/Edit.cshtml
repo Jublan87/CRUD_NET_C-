@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>cliente</h4>
         <hr />
@@ -73,4 +73,19 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).ready(function () {
+            _initEvents();
+            $('#razonSocial').attr('readonly', 'readonly');
+        });
+        function _initEvents() {
+            $("#cuit").change(function () {
+                $.get('https://sistemaintegracomex.com.ar/Account/GetNombreByCuit?cuit=' + $('#cuit').val(), function (data) {
+                    $('#razonSocial').val(data);
+                })
+
+            });
+        }
+    </script>
 }

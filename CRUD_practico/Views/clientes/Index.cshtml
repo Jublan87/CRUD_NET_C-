@@ -1,32 +1,33 @@
 ﻿@model IEnumerable<CRUD_practico.Models.cliente>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cliente";
 }
 
-<h2>Index</h2>
+<h2>Cliente</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<button class="btn-default">
+    @Html.ActionLink("Crear", "Create")
+</button>
+
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.cuit)
+            Cuit
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.razonSocial)
+            Razon social
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.telefono)
+            Telefono
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.direccion)
+            Direccion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.activo)
+            Activo
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
